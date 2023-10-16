@@ -1,0 +1,259 @@
+/*wep font*/
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+
+/*reset*/
+* {margin: 0; padding: 0;}
+li { list-style: none;}
+a { text-decoration: none; color:inherit;}
+img { vertical-align: top; }
+
+
+/*common*/
+html { overflow-x: hidden;}
+body { font-family: 'nanumsquare'; color:#1d1d1d;}
+ul:after, .cl:after { content: ""; clear: both; display: block;}
+.wrap { width: 1450px; margin:0 auto;  position: relative;}
+.blind { position: absolute; left:-9999px; font-size: 0px; width: 0; height: 0; overflow-x: hidden;}
+.blank { height: 0;}
+
+/*index*/
+header {height: 80px; overflow: hidden; transition:0.3s; position:fixed; z-index: 999; width: 100%; color:#fff;}
+header:before { content: ""; border-top: 1px solid #ddd; width: 100%; position: absolute; top:80px; left:0; /*opacity: 0; transition: 0.3s;*/ }
+header:hover { background: #fff; color:inherit;}
+header.active { background: #fff; color:inherit; }
+
+header.active h1 a img:first-child { display: none;}
+header.active h1 a img:last-child { display: inline-block;}
+header.active .snv li:after { color:#ddd;}
+
+header:hover h1 a img:first-child { display: none; }
+header:hover h1 a img:last-child { display: inline-block; }
+header .wrap h1 { padding-top: 22px;}
+header .wrap h1 img:last-child { display: none;}
+
+header.on { color:inherit; height: 730px; box-shadow: 0px 10px 50px 0px #eee; }
+/* ㄴ 제일 많은 탭메뉴를 기준으로 높이 설정하기*/
+
+header .gnb { line-height: 90px; position: absolute; top:0; right:300px; text-align: center;}
+header .gnb > li { float: left; width: 170px; }
+/* ㄴ 직계설정을 해주지 않으면 탭메뉴도 누워진다*/
+header .gnb > li > a { font-size: 20px; font-weight: bold;}
+
+header .gnb ul { border-right: 1px solid #ddd; height: 570px; }
+header .gnb li:last-child ul { border-right: none; }
+
+header .gnb ul li a:link, header .gnb ul li a:visited { display: block; line-height: 40px; font-size: 18px;}
+header .gnb ul li a:hover, header .gnb ul li a:active, header .gnb ul li a:focus { color:#41b0ab; text-decoration: underline; text-underline-position:under; }
+
+header .gnb li:nth-child(1) ul li a, header .gnb li:last-child ul li a { font-weight: 800; font-size: 18px; color:#006a76; }
+header .gnb li:nth-child(1) ul li a:hover, header .gnb li:last-child ul li a:hover {color:#41b0ab; text-decoration: underline; }
+
+header .gnb .span { font-weight: 800; margin: 30px 0 10px;}
+header .gnb .span:first-child { margin: 0px 0 10px;}
+
+header .wrap .bg { background: #ccf; position: absolute; left:0; top:80px; width: 100%; height: 730px; background: #fff; display: none;}
+
+
+header .snv { line-height: 90px; position: absolute; top:0; right:0; }
+header .snv li { float: left; margin: 0 5px; }
+header .snv li:after { content: "|"; color:#fff; margin-left: 10px;}
+header:hover .snv li:after { color:#ddd;}
+ 
+
+header .snv li:nth-child(2):after,header .snv li:last-child:after  { display: none; }
+header .snv li a { font-size: 16px; font-weight: bold;}
+
+/*푸터*/
+footer { background: #222222; padding: 50px 0; color:#777;}
+footer .up { border-bottom: 1px solid #555555; display: flex; justify-content: space-between; align-items: center;}
+footer .up h1 { margin-bottom: 16px;}
+footer .up ul { display: flex; position: absolute; top: 11px; right:170px; line-height: 1.4; }
+footer .up ul li { margin: 0 15px 0 15px;}
+
+footer .up .naver { width: 136px; height: 30px; border:1px solid #777; margin-bottom: 16px;}
+footer .up .naver a { display: block; text-align: center; line-height: 30px;}
+footer .up .naver a img { margin-top: 10px;}
+
+
+footer .down { margin-top: 20px; display: flex; justify-content: space-between;}
+footer .down address { width: 800px; font-style: normal; display: flex; justify-content: space-between; line-height: 1;}
+footer .down address span { color: #fff;}
+
+
+/* 메인비주얼 배너*/
+#mv { height: 700px; position: relative; }
+#mv .wrap { width: 1920px;}
+
+#mv .slide {width: 400%; position: relative;}
+#mv .slide li { float:left; height: 700px; width:calc(100% / 4); position: relative; overflow: hidden;}
+/* calc를 사용하면 자기들이 알아서 계산해서 w를 나눠간다*/
+/* 부모를 100% 환산 */
+/* div의 배경에게 scale을 주면 높이값을 넘어서기때문에 overflow:hidden을 준다*/
+
+#mv .slide li div { position: absolute; left:0; top:0; width: 100%; height: 100%; background: #ccc; transform: scale(1.4); transition:4s;}
+/* li의 div를 띄울 것임, absolute를 줬으니 left값과 top값을 주고 w100%과 h100%도 줍니다 */
+/* 넘어가면서 커졌다가-> 작아질 것이기 때문에 scale을 크게 먼저 준다*/
+
+#mv .slide li.on div { transform: scale(1);}
+/* slide의 li의 div들에게 scale(1)배와 transition 1초 값을 줄 것이다*/
+/* li.on은 애니메이션 적용할 때 편하게 하기 위해 클래스값을 준 것이다*/
+
+#mv .slide li:nth-child(1) div { background: url(../images/main-visual-img-01.jpg) no-repeat center/cover; }
+#mv .slide li:nth-child(2) div { background: url(../images/main-visual-img-02.jpg) no-repeat center/cover; }
+#mv .slide li:nth-child(3) div { background: url(../images/main-visual-img-03.jpg) no-repeat center/cover;}
+#mv .slide li:nth-child(4) div { background: url(../images/main-visual-img-04.jpg) no-repeat center/cover; }
+/* 배경사진은 다 따로 들어가야 하기때문에 li의 div들에게 각각 url 적용을 해줍니다 */
+/* 원래 li에게 배경을 줘도 되지만, 그렇게 되면 scale을 적용을 하기 어려워지기때문에 div를 만들어서 배경을 줍니다*/
+
+
+#mv .slide dl {color:#fff; display: inline-block; margin:270px 0 0 240px; position: relative; z-index: 1; top:40px; opacity: 0; transition:0.9s;}
+#mv .slide .on dl { opacity: 1; top:0; }
+#mv .slide dl dt { font-size: 44px; margin-bottom: 20px; }
+#mv .slide dl dt span { font-weight:700;}
+#mv .slide dl dd { font-size: 19px; line-height: 1.6;}
+
+
+
+#mv .page { position: absolute; bottom:52px; left:240px; width: 100%; cursor: pointer;}
+#mv .page li { display: inline-block; width: 58px; height: 4px; background: #bbb; margin:0 2px; }
+#mv .page .select { background: #fff; }
+
+#mv .button a { font-size: 30px; color:#fff; position: absolute; left:516px; bottom:45px;}
+
+
+/*서비스 바로가기*/
+#svc { padding-top: 60px; padding-bottom: 100px; }
+
+#svc .wrap {display: flex; justify-content: space-between; }
+/*플렉스를 주고자 하는 것들의 *부모*에게 flex를 주기 - 기본 가로정렬 */
+/*space-between을 주면 영역에 맞춰 양 끝 정렬이 된다*/
+#svc .wrap ul { display: flex; justify-content: space-between; width: 920px;}
+/*이때 w값을 설정해주면 w값에 맞춰서 양끝정렬이 가능해진다*/
+#svc .wrap ul:after { display: none;}
+/*after:display:none;을 필수로 줘야 자동으로 생기는 after margin 삭제된다*/
+
+
+#svc .wrap .ment p { font-size: 18px; font-weight: 800; color:#006a76; margin-bottom: 20px;}
+#svc .wrap .ment h3 { font-size: 30px;}
+#svc .wrap .ment h3 span { font-weight: 800;}
+
+#svc .wrap ul li a .img { background: #eee; width: 110px; height: 110px; border-radius: 100%; box-sizing: border-box; display: flex; justify-content: center; align-items: center; transition:0.6s;}
+#svc .wrap ul li:hover a .img { background: #fff; border:1px solid #006a76; box-shadow: -5px 6px 20px 0px #ddd; transition: 0.2s; }
+#svc .wrap ul li a p { margin-top: 20px; font-size: 19px; line-height: 1.4; text-align: center;}
+
+/*병원 슬라이드 fadeup*/
+
+#hospital .wrap img { position: absolute; top:0; left:0; z-index: 1;}
+
+#hospital .wrap .h-box {background: #013743; width: 1070px; height: 600px; position: absolute; top:60px; right:0;}
+#hospital .wrap .h-ment { padding: 126px 90px 100px 510px;}
+#hospital .wrap .h-ment p { font-size: 18px; font-weight: bold; color: #f7e6a7;}
+#hospital .wrap .h-ment dl dt { font-size: 38px; color: #fff; margin: 22px 0; line-height: 1.6;}
+#hospital .wrap .h-ment dl dt span { font-weight: 800;}
+#hospital .wrap .h-ment dl dd { font-size: 20px; color: #d9e1e3; margin-bottom: 50px; line-height: 1.6;}
+#hospital .wrap .h-ment a { width: 250px; height: 74px; background: #089892; display: flex; justify-content: center; align-items: center; transition: 0.5s;}
+#hospital .wrap .h-ment a:hover { background: #016e83; transition: 0.5s; }
+#hospital .wrap .h-ment a p {color: #fff; font-size: 18px; font-weight: bold;}
+
+
+/*진료과 및 센터 안내*/
+#swiper {background: #eee url(../images/main-bg-01.png) no-repeat right bottom ; margin-top: 400px; padding-top: 190px; height: 1500px; }
+#swiper .wrap { padding-bottom: 80px; border-bottom: 1px solid #ddd;}
+#swiper .wrap:last-child { margin-top: -100px; border-bottom: none;}
+
+.swiper-title { margin-top: 200px; margin-bottom: 50px; text-align: center;}
+
+.swiper-title p {font-size: 18px; font-weight: 800; color:#016e83; margin-bottom: 18px;}
+.swiper-title h3 { font-size: 40px; font-weight: 500;}
+.swiper-title h3 span { font-weight: 800; }
+
+.swiper-mySwiper { overflow: hidden; margin-bottom: 34px; }
+.swiper-mySwiper:last-child { margin-bottom: none; }
+
+.swiper-slide { background: #fff; width: 230px; height: 230px; box-sizing: border-box; margin-bottom: 10px; }
+.swiper-slide:hover { background: linear-gradient(-20deg, rgba(1,114,132,1) 0%, rgba(1,114,132,1) 10%, rgba(8,151,146,1) 100%); color: #fff; }
+.swiper-slide img:last-child {display: none;}
+
+.swiper-slide:hover p { color: #fff;}
+.swiper-slide:hover p span {color: #fff;}
+.swiper-slide:hover h5 { color: #fff;}
+.swiper-slide:hover img { display: none;}
+.swiper-slide:hover img:last-child { display: inline-block;}
+
+.swiper-ment { height: 100%; box-sizing: border-box; padding: 20px;}
+.swiper-ment p {font-size: 14px; font-weight: 800; color: #bbb;}
+.swiper-ment p span {color: #444;}
+.swiper-ment h4 {font-size: 24px; margin: 10px 0;}
+.swiper-ment h5 {font-size: 16px; color: #555;}
+.swiper-ment img { margin-left: 60%; margin-top: 10%;}
+
+.next, .prev { width: 70px; height: 70px; background: #eee; border:1px solid #ddd; position: absolute; top: calc(52% - 70px); }
+.next a, .prev a { width: 100%; height: 100%; background: #eee; display: flex; justify-content: center; align-items: center; font-size: 30px; color: #666; }
+.next { right: -90px; }
+.prev { left: -90px;}
+
+#swiper .box {  width: 250px; height: 74px; background: #013743; transition: 0.5s; margin:0 auto; }
+#swiper .box a { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;  }
+#swiper .box:hover {background: #016e83; transition: 0.5s;}
+#swiper .box p {color: #fff; font-size: 18px; font-weight: bold;}
+
+/*병원소식*/
+#news {padding: 100px 0;}
+#news h3 { font-size: 30px; font-weight: 800; text-align: center; margin-bottom: 50px;}
+
+#news ul { display: flex; flex-wrap: wrap;}
+#news ul li { width: 470px; height: 280px; background: #f5f5f5; box-sizing: border-box; margin: 0 20px 20px 0; }
+#news ul li:nth-child(3n) { margin-right: 0;}
+
+#news ul li a { height: 100%; width: 100%; display: block; padding: 50px 30px; box-sizing: border-box; transition:0.6s;}
+#news ul li:hover a { background: #fff; border: 1px solid #006a76; box-shadow: -5px 6px 20px 0px #ddd; transition:0.2s;}
+#news ul li:hover dt { color: #006a76; }
+
+#news ul li dl { height: 160px; margin-bottom: 20px;}
+#news ul li dt {font-size: 20px; font-weight: 700; line-height: 1.4;}
+#news ul li dd {font-size: 18px; line-height: 1.6; margin: 30px 0;}
+#news ul li p {font-size: 16px; color: #a2aab9; float: left;}
+#news ul li span {font-size: 16px; color: #016e83; float:right; border-bottom: 1px solid #016e83}
+
+
+#news .all { width: 250px; height: 74px; background: #013743; transition: 0.5s; margin:0 auto; margin-top: 30px;}
+#news .all:hover { background: #016e83; transition: 0.5s; }
+#news .all a { width: 100%; height: 100%; display: block; display: flex; justify-content: center; align-items: center; }
+#news .all p {color: #fff; font-size: 18px; font-weight: bold;}
+
+/*지도*/
+#place { position: relative; }
+#place .hosp { width: 560px; height: 480px; background: #013743; padding: 70px; box-sizing: border-box; position: absolute; top: 130px; left:76px;}
+.hosp h3 {font-size: 36px; font-weight: 800; color: #fff; margin-bottom: 30px;}
+.hosp .add { font-size: 18px; font-weight: 600; color:#fff; margin-bottom: 60px;}
+.hosp .add li { margin-bottom: 10px;}
+.hosp .add span { color:#a2aab9;}
+.hosp .add li:last-child a {border-bottom: 1px solid #ff0; color:#ff0; }
+
+.icon li { float: left; width: 130px; height: 70px; text-align: center; border-right: 1px solid #a2aab9;}
+.icon li:last-child { border-right: none;}
+.icon li a { display: block; font-size: 18px; font-weight: 700; color:#fff; }
+.icon a img { margin-bottom: 16px;}
+
+/*퀵메뉴*/
+
+.quick { position: fixed; right:20px; bottom: 120px; z-index: 1;}
+
+.call {  width: 80px; height: 80px; border-radius: 100px; background: #222222; color:#fff; display: flex; justify-content: center; align-items:center; text-align:center; transition: 0.6s;}
+.call:hover { width: 280px; border-radius: 50px; }
+.call:hover li:last-child { display: flex; font-size: 24px; font-weight: 800; line-height: 44px; margin-left: 16px; }
+.call li { float:left; }
+.call li:last-child { display: none; }
+.call .xi-call { font-size: 20px;}
+.call i p { font-size: 13px;  margin-top: 4px;}
+
+.arrow-up { position: fixed;  right:20px; bottom: 25px; margin-top: 10px; width: 80px; height: 80px; border-radius: 100px; background: #fff; color:#222222; display: flex; justify-content: center; align-items:center; text-align:center; box-shadow: 0px 0px 6px 0px #ddd; box-sizing: border-box;}
+.arrow-up .xi-arrow-up { font-size: 28px;} 
+
+
+
+
+
+
+
