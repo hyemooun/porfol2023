@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>서산중앙병원 테스트</title>
+    <!--xeicon 링크-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!--스타일시트 링크-->
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--제이쿼리 라이브러리-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!--aos-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- 스와이퍼 갤러리-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.3.0/swiper-bundle.min.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>-->
+</head>
+<body>
+   <header>
+       <div class="wrap">
+           <h1>
+               <a href="index.html">
+                   <img src="images/header-logo-fff.svg" alt="서산병원 로고">
+                   <img src="images/header-logo-color.svg" alt="서산병원 로고">
+               </a>
+           </h1>
+           <ul class="gnb">
+               <li>
+                   <a href="#">진료과&middot;센터</a>
+                   <ul class="gnb_bar">
+                       <li><a href="#">진료과</a></li>
+                       <li><a href="#">전문센터</a></li>
+                       <li><a href="#">의료진</a></li>
+                   </ul>
+               </li>
+               <li>
+                   <a href="#">진료안내</a>
+                   <ul class="gnb_bar">
+                       <li class="span"><a href="#">진료안내</a></li>
+                       <li><a href="#">외래진료</a></li>
+                       <li><a href="#">응급진료</a></li>
+                       <li><a href="#">진료절차</a></li>
+                       <li class="span"><a href="#">입퇴원 안내</a></li>
+                       <li><a href="#">입퇴원 절차</a></li>
+                       <li><a href="#">입원생활안내</a></li>
+                       <li><a href="#">면회 안내</a></li>
+                       <li><a href="#">이번주 식단</a></li>
+                       <li class="span"><a href="#">발급/조회안내</a></li>
+                       <li><a href="#">증명서 발급</a></li>
+                       <li><a href="#">비급여 진료비용</a></li>
+                   </ul>
+               </li>
+               <li>
+                   <a href="#">병원 이용안내</a>
+                   <ul class="gnb_bar">
+                       <li class="span"><a href="#">위치안내</a></li>
+                       <li><a href="#">오시는 길</a></li>
+                       <li><a href="#">주차 안내</a></li>
+                       <li class="span"><a href="#">시설 안내</a></li>
+                       <li><a href="#">편의시설</a></li>
+                       <li><a href="#">층별안내</a></li>
+                       <li><a href="#">예배 안내</a></li>
+                       <li><a href="#">장례식장</a></li>
+                   </ul>
+               </li>
+               <li>
+                   <a href="#">고객센터</a>
+                   <ul class="gnb_bar">
+                       <li class="span"><a href="#">공지사항</a></li>
+                       <li><a href="#">병원소식</a></li>
+                       <li><a href="#">채용정보</a></li>
+                       <li class="span"><a href="#">고객 서비스</a></li>
+                       <li><a href="#">자주 묻는 질문</a></li>
+                       <li><a href="#">전화번호 안내</a></li>
+                       <li><a href="#">고객의 소리</a></li>
+                       <li><a href="#">건강상담</a></li>
+                       <li><a href="#">고객 감동사연</a></li>
+                       <li><a href="#">건강정보</a></li>
+                   </ul>
+               </li>
+               <li>
+                   <a href="#">병원소개</a>
+                   <ul class="gnb_bar">
+                       <li><a href="#">서산중앙병원 소개</a></li>
+                       <li><a href="#">병원장 인사말</a></li>
+                       <li><a href="#">미션&middot;비전&middot;핵심가치</a></li>
+                       <li><a href="#">병원연혁</a></li>
+                       <li><a href="#">장비소개</a></li>
+                   </ul>
+               </li>
+           </ul>
+           <ul class="snv">
+               <li><a href="#">로그인</a></li>
+               <li><a href="#">회원가입</a></li>
+               <li>
+                   <a class="menu-trigger" href="#">
+                       <span></span>
+                       <span></span>
+                       <span></span>
+                   </a>
+               </li>
+           </ul>
+           <span class="bg"></span>
+       </div>
+   </header>
+   <div class="blank"></div>
+   
+   <section id="mv">
+       <h2 class="blind">메인 비주얼 배너 영역</h2>
+       <div class="wrap">
+           <ul class="slide">
+               <li>
+                   <div></div>
+                   <dl>
+                       <dt><span>환자중심의 빠르고 체계적인</span><br>
+                       의료서비스 시스템을 구축</dt>
+                       <dd>16개 진료과, 10개 전문센터를 운영.<br>
+                       충남 서북부 최대 규모의 의료시설, 서산중앙병원입니다.</dd>
+                   </dl>
+               </li>
+               <li>
+                  <div></div>
+                  <dl>
+                       <dt>지역민의 건강주치의로<br>
+                       <span>늘 시민들의 곁에 있겠습니다.</span></dt>
+                       <dd>서산중앙병원은 지역민의 건강한 삶을 지키기 위해<br>
+                       언제나 지역민과 함께 합니다.</dd>
+                   </dl>
+               </li>
+               <li>
+                  <div></div>
+                  <dl>
+                       <dt><span>코로나 19로부터 안전한</span><br>
+                       국민안심병원, 서산중앙병원입니다.</dt>
+                       <dd>전 이용객의 여행력, 발열, 이동경로, 증상을 확인하고<br>
+                       진료 전 과정에서 다른 환자와 분리하여 진료합니다.</dd>
+                   </dl>
+               </li>
+               <li>
+                  <div></div>
+                  <dl>
+                       <dt>국민건강보험공단<br>
+                       3주기 병원급 검진기관 평가결과<br>
+                       검진유형에서 <span>&quot;최우수&quot; 선정</span></dt>
+                   </dl>
+               </li>
+           </ul>
+           <ul class="page">
+               <li class="select"></li>
+               <li></li>
+               <li></li>
+               <li></li>
+           </ul>
+           <div class="button">
+               <a href="#none" class="xi-pause-circle-o"></a>
+           </div>
+           
+       </div>
+   </section>
+   
+   <section id="svc">
+       <h2 class=blind>서비스 바로가기</h2>
+       <div class="wrap">
+           <div class="ment">
+               <p>서비스 바로가기</p>
+               <h3>원하시는 항목을<br>
+               <span>빠르게 찾아보세요.</span></h3>
+           </div>
+           <ul>
+               <li>
+                   <a href="#">
+                       <div class="img">
+                           <img src="images/main-quick-icon-01.svg" alt="진료과">
+                       </div>
+                       <p>진료과</p>
+                   </a>
+               </li>
+               <li>
+                   <a href="#">
+                       <div class="img">
+                           <img src="images/main-quick-icon-02.svg" alt="전화번호 안내">
+                       </div>
+                       <p>전화번호 안내</p>
+                   </a>
+               </li>
+               <li>
+                   <a href="#">
+                       <div class="img">
+                           <img src="images/main-quick-icon-03.svg" alt="건강상담">
+                       </div>
+                       <p>건강상담</p>
+                   </a>
+               </li>
+               <li>
+                   <a href="#">
+                       <div class="img">
+                           <img src="images/main-quick-icon-04.svg" alt="증명서 발급">
+                       </div>
+                       <p>증명서 발급</p>
+                   </a>
+               </li>
+               <li>
+                   <a href="#">
+                       <div class="img">
+                           <img src="images/main-quick-icon-05.svg" alt="건강검진">
+                       </div>
+                       <p>건강검진</p>
+                   </a>
+               </li>
+               <li>
+                   <a href="#">
+                       <div class="img">
+                           <img src="images/main-quick-icon-06.svg" alt="장례식장">
+                       </div>
+                       <p>장례식장</p>
+                   </a>
+               </li>
+           </ul>
+       </div>
+   </section>
+   
+   <section id="hospital">
+       <div class="blind">서산중앙병원 의료진</div>
+       <div class="wrap">
+           <img data-aos="fade-up" src="images/main-img-01.jpg" alt="서산중앙병원">
+           <div class="h-box" data-aos="fade-up" data-aos-delay="600">
+               <div class="h-ment" data-aos="fade-up" data-aos-delay="400" >
+                   <p>서산중앙병원 의료진</p>
+                   <dl>
+                       <dt><span>국내 최고의 전문 의료진</span>이<br>
+                       함께합니다.</dt>
+                       <dd>충남 서북부 최대 규모의 서산중앙병원은 30여명의<br>
+                       전문 의료진에 의한 최고의 의료서비스 제공합니다.</dd>
+                   </dl>
+                   <a href="#"><p>의료진 전체보기</p></a>
+               </div>
+           </div>
+       </div>
+   </section>
+   
+   
+   <section id="swiper">
+       <h2 class="blind">진료과 및 센터 안내</h2>
+       <div class="wrap">
+           <div class="swiper-title" data-aos="fade-up" data-aos-delay="460">
+               <p>바른 진료, 최상의 의료 서비스</p>
+               <h3>서산중앙병원 <span>진료과</span></h3>
+           </div>
+           <div class="swiper-mySwiper sld1"> 
+               <div class="swiper-wrapper">
+                   <div class="swiper-slide">
+                       <a href="#">
+                           <div class="swiper-ment">
+                               <p><span>01</span>/16</p>
+                               <h4>호흡기내과</h4>
+                               <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                               <img src="images/icon_type01.png" alt="호흡기내과">
+                               <img src="images/icon_type01_fff.png" alt="호흡기내과">
+                           </div>
+                       </a>
+                   </div>
+                   <div class="swiper-slide">
+                       <a href="#">
+                           <div class="swiper-ment">
+                               <p><span>02</span>/16</p>
+                               <h4>신장과</h4>
+                               <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                               <img src="images/icon_type02.png" alt="신장내과">
+                               <img src="images/icon_type02_fff.png" alt="신장내과">
+                           </div>
+                       </a>
+                   </div>
+                   <div class="swiper-slide">
+                       <a href="#">
+                           <div class="swiper-ment">
+                               <p><span>03</span>/16</p>
+                               <h4>내분비내과</h4>
+                               <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                               <img src="images/icon_type03.png" alt="내분비내과">
+                               <img src="images/icon_type03_fff.png" alt="내분비내과">
+                           </div>
+                       </a>
+                   </div>
+                   <div class="swiper-slide">
+                       <a href="#">
+                           <div class="swiper-ment">
+                               <p><span>04</span>/16</p>
+                               <h4>소화기내과</h4>
+                               <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                               <img src="images/icon_type04.png" alt="소화기내과">
+                               <img src="images/icon_type04_fff.png" alt="소화기내과">
+                           </div>
+                       </a>
+                   </div>
+                   <div class="swiper-slide">
+                       <a href="#">
+                           <div class="swiper-ment">
+                               <p><span>05</span>/16</p>
+                               <h4>외과</h4>
+                               <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                               <img src="images/icon_type05.png" alt="외과">
+                               <img src="images/icon_type05_fff.png" alt="외과">
+                           </div>
+                       </a>
+                   </div>
+                   <div class="swiper-slide">
+                       <a href="#">
+                           <div class="swiper-ment">
+                               <p><span>06</span>/16</p>
+                               <h4>정형외과</h4>
+                               <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                               <img src="images/icon_type06.png" alt="정형외과">
+                               <img src="images/icon_type06_fff.png" alt="정형외과">
+                           </div>
+                       </a>
+                   </div>
+                   <div class="swiper-slide">
+                                   <a href="#">
+                                       <div class="swiper-ment">
+                                           <p><span>07</span>/16</p>
+                                           <h4>신경과</h4>
+                                           <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                                           <img src="images/icon_type01.png" alt="신경과">
+                                           <img src="images/icon_type01_fff.png" alt="신경과">
+                                       </div>
+                                   </a>
+                               </div>
+                               <div class="swiper-slide">
+                                   <a href="#">
+                                       <div class="swiper-ment">
+                                           <p><span>08</span>/16</p>
+                                           <h4>신경외과</h4>
+                                           <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                                           <img src="images/icon_type01.png" alt="신경외과">
+                                           <img src="images/icon_type01_fff.png" alt="신경외과">
+                                       </div>
+                                   </a>
+                               </div>
+                               <div class="swiper-slide">
+                                   <a href="#">
+                                       <div class="swiper-ment">
+                                           <p><span>09</span>/16</p>
+                                           <h4>비뇨의학과</h4>
+                                           <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                                           <img src="images/icon_type01.png" alt="비뇨의학과">
+                                           <img src="images/icon_type01_fff.png" alt="비뇨의학과">
+                                       </div>
+                                   </a>
+                               </div>
+                               <div class="swiper-slide">
+                                   <a href="#">
+                                       <div class="swiper-ment">
+                                           <p><span>10</span>/16</p>
+                                           <h4>산부인과</h4>
+                                           <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                                           <img src="images/icon_type01.png" alt="산부인과">
+                                           <img src="images/icon_type01_fff.png" alt="산부인과">
+                                       </div>
+                                   </a>
+                               </div>
+                               <div class="swiper-slide">
+                                   <a href="#">
+                                       <div class="swiper-ment">
+                                           <p><span>11</span>/16</p>
+                                           <h4>재활의학과</h4>
+                                           <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                                           <img src="images/icon_type01.png" alt="재활의학과">
+                                           <img src="images/icon_type01_fff.png" alt="재활의학과">
+                                       </div>
+                                   </a>
+                               </div>
+                               <div class="swiper-slide">
+                                   <a href="#">
+                                       <div class="swiper-ment">
+                                           <p><span>12</span>/16</p>
+                                           <h4>응급의학과</h4>
+                                           <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                                           <img src="images/icon_type01.png" alt="응급의학과">
+                                           <img src="images/icon_type01_fff.png" alt="응급의학과">
+                                       </div>
+                                   </a>
+                               </div>
+                               <div class="swiper-slide">
+                                   <a href="#">
+                                       <div class="swiper-ment">
+                                           <p><span>13</span>/16</p>
+                                           <h4>치과/구강외과</h4>
+                                           <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                                           <img src="images/icon_type01.png" alt="치과/구강외과">
+                                           <img src="images/icon_type01_fff.png" alt="치과/구강외과">
+                                       </div>
+                                   </a>
+                               </div>
+                               <div class="swiper-slide">
+                                   <a href="#">
+                                       <div class="swiper-ment">
+                                           <p><span>14</span>/16</p>
+                                           <h4>마취통증의학과</h4>
+                                           <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                                           <img src="images/icon_type01.png" alt="마취통증의학과">
+                                           <img src="images/icon_type01_fff.png" alt="마취통증의학과">
+                                       </div>
+                                   </a>
+                               </div>
+                               <div class="swiper-slide">
+                                   <a href="#">
+                                       <div class="swiper-ment">
+                                           <p><span>15</span>/16</p>
+                                           <h4>영상의학과</h4>
+                                           <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                                           <img src="images/icon_type01.png" alt="영상의학과">
+                                           <img src="images/icon_type01_fff.png" alt="영상의학과">
+                                       </div>
+                                   </a>
+                               </div>
+                               <div class="swiper-slide">
+                       <a href="#">
+                           <div class="swiper-ment">
+                               <p><span>16</span>/16</p>
+                               <h4>진단검사의학과</h4>
+                               <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                               <img src="images/icon_type01.png" alt="진단검사의학과">
+                               <img src="images/icon_type01_fff.png" alt="진단검사의학과">
+                           </div>
+                       </a>
+                   </div>
+               </div>
+               <div class="next">
+                   <a href="#"><i class="xi-arrow-right"></i></a>
+               </div>
+               <div class="prev">
+                   <a href="#"><i class="xi-arrow-left"></i></a>
+               </div>
+           </div>
+           <div class="box">
+              <a href="#">
+                  <p>진료과 전체보기</p>
+              </a>
+           </div>
+       </div>
+       
+        <div class="wrap">
+            <div class="swiper-title" data-aos="fade-up" data-aos-delay="460">
+                <p>환자중심, 고객만족의 의료케어</p>
+                <h3>서산중앙병원 <span>전문센터</span></h3>
+            </div>
+            <div class="swiper-mySwiper sld2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="swiper-ment">
+                                <p><span>01</span>/09</p>
+                                <h4>소화기내시경센터</h4>
+                                <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                                <img src="images/icon_center01.png" alt="소화기내시경센터">
+                                <img src="images/icon_center01_fff.png" alt="소화기내시경센터">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="swiper-ment">
+                                <p><span>02</span>/09</p>
+                                <h4>뇌신경센터</h4>
+                                <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                                <img src="images/icon_center02.png" alt="뇌신경센터">
+                                <img src="images/icon_center02_fff.png" alt="뇌신경센터">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="swiper-ment">
+                                <p><span>03</span>/09</p>
+                                <h4>복강경센터</h4>
+                                <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                                <img src="images/icon_center03.png" alt="복강경센터">
+                                <img src="images/icon_center03_fff.png" alt="복강경센터">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="swiper-ment">
+                                <p><span>04</span>/09</p>
+                                <h4>재활의학센터</h4>
+                                <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                                <img src="images/icon_center04.png" alt="재활의학센터">
+                                <img src="images/icon_center04_fff.png" alt="재활의학센터">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="swiper-ment">
+                                <p><span>05</span>/09</p>
+                                <h4>유방갑상선센터</h4>
+                                <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                                <img src="images/icon_center05.png" alt="유방갑상선센터">
+                                <img src="images/icon_center05_fff.png" alt="유방갑상선센터">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="swiper-ment">
+                                <p><span>06</span>/09</p>
+                                <h4>인공신장센터</h4>
+                                <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                                <img src="images/icon_center06.png" alt="인공신장센터">
+                                <img src="images/icon_center06_fff.png" alt="인공신장센터">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="swiper-ment">
+                                <p><span>07</span>/09</p>
+                                <h4>건강증진센터</h4>
+                                <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                                <img src="images/icon_type01.png" alt="건강증진센터">
+                                <img src="images/icon_type01_fff.png" alt="건강증진센터">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="swiper-ment">
+                                <p><span>08</span>/09</p>
+                                <h4>당뇨센터</h4>
+                                <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                                <img src="images/icon_type01.png" alt="당뇨센터">
+                                <img src="images/icon_type01_fff.png" alt="당뇨센터">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="swiper-ment">
+                                <p><span>09</span>/09</p>
+                                <h4>척추관절센터</h4>
+                                <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                                <img src="images/icon_type01.png" alt="척추관절센터">
+                                <img src="images/icon_type01_fff.png" alt="척추관절센터">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="swiper-ment">
+                                <p><span>07</span>/09</p>
+                                <h4>건강증진센터</h4>
+                                <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                                <img src="images/icon_type01.png" alt="건강증진센터">
+                                <img src="images/icon_type01_fff.png" alt="건강증진센터">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="swiper-ment">
+                                <p><span>08</span>/09</p>
+                                <h4>당뇨센터</h4>
+                                <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                                <img src="images/icon_type01.png" alt="당뇨센터">
+                                <img src="images/icon_type01_fff.png" alt="당뇨센터">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="swiper-ment">
+                                <p><span>09</span>/09</p>
+                                <h4>척추관절센터</h4>
+                                <h5>바로가기 <i class="xi-arrow-right"></i></h5>
+                                <img src="images/icon_type01.png" alt="척추관절센터">
+                                <img src="images/icon_type01_fff.png" alt="척추관절센터">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="next">
+                    <a href="#"><i class="xi-arrow-right"></i></a>
+                </div>
+                <div class="prev">
+                    <a href="#"><i class="xi-arrow-left"></i></a>
+                </div>
+            </div>
+            <div class="box">
+                <a href="#">
+                    <p>전문센터 전체보기</p>
+                </a>
+            </div>
+        </div>
+   </section>
+   
+   <section id="news">
+       <h2 class="blind">병원 소식</h2>
+       <div class="wrap">
+           <h3>병원소식</h3>
+           <ul>
+               <li>
+                  <a href="#">
+                      <dl>
+                          <dt>[EVENT!] 서산중앙병원 택시를 찾아라! 인증샷<br>이벤트</dt>
+                          <dd>EVENT! [서산중앙병원 택시] 인스타그램 인증샷<br>
+                          이벤트 10월 2일(월) 부터 시작합니다! 서산...</dd>
+                      </dl>
+                      <p>2023.09.18</p>
+                      <span>자세히 보기 <i class="xi-arrow-right"></i></span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                      <dl>
+                          <dt>2023년 9월 진료과 휴진일정</dt>
+                          <dd>※ 모바일에서 보실 경우 화면을 가로로 돌려서<br>
+                          보세요. 9월 1주차 휴진일정 ...</dd>
+                      </dl>
+                      <p>2023.09.06</p>
+                      <span>자세히 보기 <i class="xi-arrow-right"></i></span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                      <dl>
+                          <dt>2023년 추석 휴진안내 및 10월 2일(월)<br>
+                          정상진료 안내</dt>
+                          <dd>서산중앙병원은 추석연휴를 맞이하여 9월 28일(목)~<br>
+                          30일(토)는 진료 휴진이며, 임시공휴일인 10월...</dd>
+                      </dl>
+                      <p>2023.09.05</p>
+                      <span>자세히 보기 <i class="xi-arrow-right"></i></span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                      <dl>
+                          <dt>2023년 8월 15일 광복절 휴진안내</dt>
+                          <dd>○ 서산중앙병원 8월 휴진안내 ○ 8월 15일(화)<br>
+                          광복절은 휴진하오니 참고 부탁드리며, 일정을...</dd>
+                      </dl>
+                      <p>2023.08.09</p>
+                      <span>자세히 보기 <i class="xi-arrow-right"></i></span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                      <dl>
+                          <dt>내과 의료진 부임 안내</dt>
+                          <dd></dd>
+                      </dl>
+                      <p>2023.07.24</p>
+                      <span>자세히 보기 <i class="xi-arrow-right"></i></span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                      <dl>
+                          <dt>병문안 문화 개선 캠페인</dt>
+                          <dd></dd>
+                      </dl>
+                      <p>2023.07.20</p>
+                      <span>자세히 보기 <i class="xi-arrow-right"></i></span>
+                  </a>
+               </li>
+           </ul>
+           <div class="all">
+                <a href="#">
+                    <p>병원소식 전체보기</p>
+                </a>
+           </div>
+       </div>
+   </section>
+   
+   <section id="place">
+       <h2 class="blind">찾아오는 길</h2>
+       <div class="map">
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12781.374664529007!2d126.4464730024338!3d36.78630978558356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357a5ceefb359f8d%3A0x78cc6ce3176716c1!2z7ISc7IKw7KSR7JWZ67OR7JuQ!5e0!3m2!1sko!2skr!4v1695208649755!5m2!1sko!2skr" width="100%" height="700" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       </div>
+       <div class="hosp">
+           <h3>찾아오시는 길</h3>
+           <ul class="add">
+               <li><span>병원위치</span>&nbsp;&nbsp; 충남 서산시 수석산업로 5</li>
+               <li><span>대표전화</span>&nbsp;&nbsp; 041.661.1000</li>
+               <li><span>주차안내</span>&nbsp;&nbsp; <a href="#">자세히 보기&nbsp;<i class="xi-arrow-right"></i></a></li>
+           </ul>
+           <ul class="icon">
+               <li>
+                   <a href="https://naver.me/xyl9C6jW" target="_blank">
+                       <img src="images/icon-sns-naver.svg" alt="네이버지도">
+                       <p>네이버 지도</p>
+                   </a>
+               </li>
+               <li>
+                   <a href="https://kko.to/F5xR_sUohP" target="_blank">
+                       <img src="images/icon-sns-kakao.svg" alt="카카오지도">
+                       <p>카카오 지도</p>
+                   </a>
+               </li>
+               <li>
+                   <a href="https://maps.app.goo.gl/TkFfGf1rhWaXbR3N7" target="_blank">
+                       <img src="images/icon-sns-google.svg" alt="구글지도">
+                       <p>구글 지도</p>
+                   </a>
+               </li>
+           </ul>
+       </div>
+   </section>
+   
+   <div class="quick fixed">
+       <aside>
+           <a href="tel:041-661-1000" class="call">
+               <ul>
+                   <li>
+                       <i class="xi-call">
+                       <p>대표전화</p>
+                       </i> 
+                   </li>
+                   <li>
+                       <p>041-661-1000</p>
+                   </li>
+               </ul>
+           </a>
+       </aside>
+       <a href="index2.html" class="arrow-up">
+           <i class="xi-arrow-up"></i>
+       </a>
+   </div>
+   
+   <footer>
+       <div class="wrap">
+           <div class="up">
+               <h1>
+                   <img src="images/header-logo-fff.svg" alt="서산중앙병원 로고">
+               </h1>
+               <ul>
+                   <li><a href="#none">이용약관</a></li>
+                   <li><a href="#none">개인정보 처리방침</a></li>
+                   <li><a href="#none">쿠키정책</a></li>
+                   <li><a href="#none">환자의 권리와 의무</a></li>
+                   <li><a href="#none">비급여항목</a></li>
+               </ul>
+               <div class="naver">
+                   <a href="https://blog.naver.com/isjh1000" target="_blank">네이버 블로그 <img src="images/btn-icon-link-arrow.svg" alt="arrow"></a>
+               </div>
+           </div>
+           
+           <div class="down">
+               <address>
+                   <p>주소&nbsp;&nbsp;<span>충남 서산시 수석산업로 5</span></p>
+                   <p>대표전화&nbsp;&nbsp;<span>041-661-1000</span></p>
+                   <p>팩스&nbsp;&nbsp;<span>041-661-1209</span></p>
+                   <p>검진센터&nbsp;&nbsp;<span>041-661-1051~2</span></p>
+               </address>
+               <p>&copy; 2021 서산중앙병원 All Rights Reserved.</p>
+           </div>
+       </div>
+   </footer>
+   
+   
+   <script src="js/index.js"></script>
+</body>
+</html>
